@@ -31,8 +31,24 @@ function capitalizeWords(sentence) {
 console.log("Challenge 3");
 console.log(capitalizeWords("that's a really good and cool dog!"));
 
+// Challenge 4 - Remove extra spaces from a string
+
+function removeExtraSpaces(sentence) {
+  return sentence
+    .trim()
+    .split(" ")
+    .filter((word) => word.length > 0)
+    .join(" ");
+}
+
+console.log("Challenge 4");
+console.log(removeExtraSpaces("Hello   Dog!"));
+console.log(removeExtraSpaces("This is a another   test!"));
+
+
 module.exports = {
   capitalize,
   upperCase,
   capitalizeWords,
+  removeExtraSpaces,
 };
