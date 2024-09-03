@@ -1,6 +1,6 @@
 // Challenge 1 - Capitalize the first letter of a string.
 
-function capitalize(word) {
+function capitalize(word: string): string {
   if (word.length === 0) return word;
   return word[0].toUpperCase() + word.slice(1);
 }
@@ -10,7 +10,7 @@ console.log(capitalize("good dog!"));
 
 // Challenge 2 - Makes all characters uppercase
 
-function upperCase(word) {
+function upperCase(word: string): string {
   if (word.length === 0) return word;
   return word.toUpperCase();
 }
@@ -20,7 +20,7 @@ console.log(upperCase("good dog!"));
 
 // Challenge 3 - Make first character of each word uppercase
 
-function capitalizeWords(sentence) {
+function capitalizeWords(sentence: string): string {
   if (sentence.length === 0) return sentence;
   return sentence
     .split(" ")
@@ -33,7 +33,7 @@ console.log(capitalizeWords("that's a really good and cool dog!"));
 
 // Challenge 4 - Remove extra spaces from a string
 
-function removeExtraSpaces(sentence) {
+function removeExtraSpaces(sentence: string): string {
   return sentence
     .trim()
     .split(" ")
@@ -48,7 +48,7 @@ console.log(removeExtraSpaces("This is a another   test!"));
 // Challenge 5 - 
 // Removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase.
 
-function kebabCase(sentence) {
+function kebabCase(sentence: string): string {
   return sentence
     .trim()
     .toLowerCase()
@@ -63,7 +63,7 @@ console.log(kebabCase("Hello   Dog!"));
 // Challenge 6
 // snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
 
-function snakeCase(sentence) {
+function snakeCase(sentence: string): string {
   return sentence
     .trim()
     .toLowerCase()
@@ -78,7 +78,7 @@ console.log(snakeCase("Hello   Dog!"));
 // Challenge 7
 // camelCase() - Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
 
-function camelCase(sentence) {
+function camelCase(sentence: string): string {
   return sentence
     .trim()
     .toLowerCase()
@@ -99,7 +99,7 @@ console.log(camelCase("Hello   Dog from the other side of the neighborhood!"));
 // shift() this method will take the first character of a string and move to the end of a string:
 //Example: Hello World -> ello WorldH
 
-function shift(sentence) {
+function shift(sentence: string): string {
   if (sentence.length === 0) return sentence;
   return sentence.slice(1) + sentence[0];
 }
@@ -107,7 +107,7 @@ function shift(sentence) {
 console.log("Challenge 8");
 console.log(shift("Hello World"));
 
-module.exports = {
+export {
   capitalize,
   upperCase,
   capitalizeWords,

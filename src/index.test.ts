@@ -1,4 +1,4 @@
-const { capitalize, upperCase, capitalizeWords, removeExtraSpaces, kebabCase, snakeCase, camelCase, shift } = require('./index');
+import { capitalize, upperCase, capitalizeWords, removeExtraSpaces, kebabCase, snakeCase, camelCase, shift } from './index';
 
 describe('String Library Tests', () => {
     // Test for capitalize function - Challenge 1
