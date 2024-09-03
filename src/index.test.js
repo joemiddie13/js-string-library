@@ -1,4 +1,4 @@
-const { capitalize, upperCase, capitalizeWords, removeExtraSpaces } = require('./index');
+const { capitalize, upperCase, capitalizeWords, removeExtraSpaces, kebabCase, snakeCase, camelCase, shift } = require('./index');
 
 describe('String Library Tests', () => {
     // Test for capitalize function - Challenge 1
@@ -26,5 +26,33 @@ describe('String Library Tests', () => {
         expect(removeExtraSpaces("Hello   Dog!")).toBe("Hello Dog!");
         expect(removeExtraSpaces("This is a another   test!")).toBe("This is a another test!");
         expect(removeExtraSpaces("")).toBe("");
+    });
+
+    // Test for kebabCase function - Challenge 5
+    test('kebabCase should remove extra spaces and replace spaces with the hyphen "-", and makes all characters lowercase', () => {
+        expect(kebabCase("Hello   Dog!")).toBe("hello-dog!");
+        expect(kebabCase("This is a another   test!")).toBe("this-is-a-another-test!");
+        expect(kebabCase("")).toBe("");
+    });
+
+    // Test for snakeCase function - Challenge 6
+    test('snakeCase should remove extra spaces and replace spaces with the underscore "_", and makes all characters lowercase', () => {
+        expect(snakeCase("Hello   Dog!")).toBe("hello_dog!");
+        expect(snakeCase("This is a another   test!")).toBe("this_is_a_another_test!");
+        expect(snakeCase("")).toBe("");
+    });
+
+    // Test for camelCase function - Challenge 7
+    test('camelCase should remove extra spaces and replace spaces with the underscore "_", and makes all characters lowercase', () => {
+        expect(camelCase("Hello   Dog!")).toBe("helloDog!");
+        expect(camelCase("This is a another   test!")).toBe("thisIsAAnotherTest!");
+        expect(camelCase("")).toBe("");
+    });
+
+    // Test for shift function - Challenge 8
+    test('shift should take the first character of a string and move to the end of a string', () => {
+        expect(shift("Hello World")).toBe("ello WorldH");
+        expect(shift("This is a another test!")).toBe("his is a another test!T");
+        expect(shift("")).toBe("");
     });
 });
