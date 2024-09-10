@@ -1,4 +1,5 @@
 # string-lib-rocko
+https://www.npmjs.com/package/string-lib-rocko
 
 A comprehensive TypeScript library for string manipulation functions.
 
