@@ -1,4 +1,4 @@
-import { capitalize, upperCase, capitalizeWords, removeExtraSpaces, kebabCase, snakeCase, camelCase, shift } from './index';
+import { capitalize, upperCase, capitalizeWords, removeExtraSpaces, kebabCase, snakeCase, camelCase, shift, makeHashTag, isEmpty } from './index';
 
 describe('String Library Tests', () => {
     // Test for capitalize function - Challenge 1
@@ -54,5 +54,18 @@ describe('String Library Tests', () => {
         expect(shift("Hello World")).toBe("ello WorldH");
         expect(shift("This is a another test!")).toBe("his is a another test!T");
         expect(shift("")).toBe("");
+    });
+
+    // Test for makeHashTag function - Challenge 9
+    test('makeHashTag should convert a string to a hash tag', () => {
+        expect(makeHashTag("Hello Dog")).toBe("#HelloDog");
+        expect(makeHashTag("This is a another test")).toBe("#ThisIsAAnotherTest");
+    });
+
+    // Test for isEmpty function - Challenge 10
+    test('isEmpty should return true if the string is empty or contains only whitespace', () => {
+        expect(isEmpty("")).toBe(true);
+        expect(isEmpty(" ")).toBe(true);
+        expect(isEmpty("Hello")).toBe(false);
     });
 });

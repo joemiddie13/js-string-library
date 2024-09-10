@@ -105,7 +105,38 @@ function shift(sentence: string): string {
 }
 
 console.log("Challenge 8");
-console.log(shift("Hello World"));
+console.log(shift("Hello Dog"));
+
+// Challenge 9
+//makeHashTag(str) - This function should convert the given string to a hash tag. 
+//A hash tag begins with # and no spaces. Each word in the phrase begins with an uppercase letter.
+
+function makeHashTag(str: string): string {
+  return '#' + str
+    .split(' ')
+    .filter(word => word.length > 0)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+}
+
+console.log("Challenge 9");
+console.log(makeHashTag("Hello Dog"));
+
+// Challenge 10
+// isEmpty(str) - Returns true if the given string is empty or contains only whitespace. 
+//White space includes: spaces, line returns, and tabs. 
+//These characters can be represented with: \n (new line) \r (carrige return), \t (tab).
+
+function isEmpty(str: string): boolean {
+  return !/\S/.test(str);
+}
+
+console.log(isEmpty("Hello dog")); // false
+console.log(isEmpty("  \t\n\r  ")); // true
+console.log(isEmpty("")); // true
+console.log(isEmpty("   ")); // true
+console.log(isEmpty("\n\t\r")); // true
+console.log(isEmpty("a")); // false
 
 export {
   capitalize,
@@ -116,4 +147,6 @@ export {
   snakeCase,
   camelCase,
   shift,
+  makeHashTag,
+  isEmpty,
 };
