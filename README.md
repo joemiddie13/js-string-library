@@ -149,6 +149,33 @@ To set up the development environment, follow these steps:
 3. Run tests: `npm test`
 4. Build the project: `npm run build`
 
+## Test Application
+
+A test application has been created to demonstrate the functionality of the `string-lib-rocko` library. You can find it in the `string-lib-test-app` directory.
+
+### Running the Test App
+
+To run the test application:
+
+1. Navigate to the `string-lib-test-app` directory:
+   ```bash
+   cd string-lib-test-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and visit `http://localhost:3000` to see the application in action.
+
+The test app provides a simple interface where you can input text and see the results of various string manipulation functions in real-time.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
