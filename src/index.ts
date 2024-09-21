@@ -5,8 +5,8 @@ function capitalize(word: string): string {
   return word[0].toUpperCase() + word.slice(1);
 }
 
-console.log("Challenge 1");
-console.log(capitalize("good dog!"));
+// console.log("Challenge 1");
+// console.log(capitalize("good dog!"));
 
 // Challenge 2 - Makes all characters uppercase
 
@@ -15,21 +15,28 @@ function upperCase(word: string): string {
   return word.toUpperCase();
 }
 
-console.log("Challenge 2");
-console.log(upperCase("good dog!"));
+// console.log("Challenge 2");
+// console.log(upperCase("good dog!"));
 
 // Challenge 3 - Make first character of each word uppercase
 
 function capitalizeWords(sentence: string): string {
-  if (sentence.length === 0) return sentence;
+  if (sentence.trim().length === 0) return sentence;
+
   return sentence
     .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+    .map((word) => {
+      if (word && word.length > 0) {
+        return word[0].toUpperCase() + word.slice(1);
+      }
+      return "";
+    })
+    .join(" ")
+    .trim();
 }
 
-console.log("Challenge 3");
-console.log(capitalizeWords("that's a really good and cool dog!"));
+// console.log("Challenge 3");
+// console.log(capitalizeWords("that's a really good and cool dog!"));
 
 // Challenge 4 - Remove extra spaces from a string
 
@@ -41,9 +48,9 @@ function removeExtraSpaces(sentence: string): string {
     .join(" ");
 }
 
-console.log("Challenge 4");
-console.log(removeExtraSpaces("Hello   Dog!"));
-console.log(removeExtraSpaces("This is a another   test!"));
+// console.log("Challenge 4");
+// console.log(removeExtraSpaces("Hello   Dog!"));
+// console.log(removeExtraSpaces("This is a another   test!"));
 
 // Challenge 5 - 
 // Removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase.
@@ -57,8 +64,8 @@ function kebabCase(sentence: string): string {
     .join("-");
 }
 
-console.log("Challenge 5");
-console.log(kebabCase("Hello   Dog!"));
+// console.log("Challenge 5");
+// console.log(kebabCase("Hello   Dog!"));
 
 // Challenge 6
 // snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
@@ -72,8 +79,8 @@ function snakeCase(sentence: string): string {
     .join("_");
 }
 
-console.log("Challenge 6");
-console.log(snakeCase("Hello   Dog!"));
+// console.log("Challenge 6");
+// console.log(snakeCase("Hello   Dog!"));
 
 // Challenge 7
 // camelCase() - Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
@@ -92,8 +99,8 @@ function camelCase(sentence: string): string {
     .join("");
 }
 
-console.log("Challenge 7");
-console.log(camelCase("Hello   Dog from the other side of the neighborhood!"));
+// console.log("Challenge 7");
+// console.log(camelCase("Hello   Dog from the other side of the neighborhood!"));
 
 // Challenge 8
 // shift() this method will take the first character of a string and move to the end of a string:
@@ -104,8 +111,8 @@ function shift(sentence: string): string {
   return sentence.slice(1) + sentence[0];
 }
 
-console.log("Challenge 8");
-console.log(shift("Hello Dog"));
+// console.log("Challenge 8");
+// console.log(shift("Hello Dog"));
 
 // Challenge 9
 //makeHashTag(str) - This function should convert the given string to a hash tag. 
@@ -119,8 +126,8 @@ function makeHashTag(str: string): string {
     .join('');
 }
 
-console.log("Challenge 9");
-console.log(makeHashTag("Hello Dog"));
+// console.log("Challenge 9");
+// console.log(makeHashTag("Hello Dog"));
 
 // Challenge 10
 // isEmpty(str) - Returns true if the given string is empty or contains only whitespace. 
@@ -131,12 +138,12 @@ function isEmpty(str: string): boolean {
   return !/\S/.test(str);
 }
 
-console.log(isEmpty("Hello dog")); // false
-console.log(isEmpty("  \t\n\r  ")); // true
-console.log(isEmpty("")); // true
-console.log(isEmpty("   ")); // true
-console.log(isEmpty("\n\t\r")); // true
-console.log(isEmpty("a")); // false
+// console.log(isEmpty("Hello dog")); // false
+// console.log(isEmpty("  \t\n\r  ")); // true
+// console.log(isEmpty("")); // true
+// console.log(isEmpty("   ")); // true
+// console.log(isEmpty("\n\t\r")); // true
+// console.log(isEmpty("a")); // false
 
 export {
   capitalize,

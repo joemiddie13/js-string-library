@@ -1,5 +1,3 @@
-'use strict';
-
 // Challenge 1 - Capitalize the first letter of a string.
 function capitalize(word) {
     if (word.length === 0)
@@ -115,13 +113,4 @@ function isEmpty(str) {
     return !/\S/.test(str);
 }
 
-exports.camelCase = camelCase;
-exports.capitalize = capitalize;
-exports.capitalizeWords = capitalizeWords;
-exports.isEmpty = isEmpty;
-exports.kebabCase = kebabCase;
-exports.makeHashTag = makeHashTag;
-exports.removeExtraSpaces = removeExtraSpaces;
-exports.shift = shift;
-exports.snakeCase = snakeCase;
-exports.upperCase = upperCase;
+export { camelCase, capitalize, capitalizeWords, isEmpty, kebabCase, makeHashTag, removeExtraSpaces, shift, snakeCase, upperCase };
